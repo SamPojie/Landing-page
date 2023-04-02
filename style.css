@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: #1abc9c4f;
+    position: fixed;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+
+.main{
+    display: flex; 
+}
+.left{
+    background-image: url(/img/happy.jpg);
+    background-size: cover;
+    background-position:center center;
+    height:100vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new{
+    width: 80%;
+    height: 50%;
+    /* background-color: grey; */
+    text-align: center;
+}   
+.left .new{
+    position: absolute;
+    /* position: fixed; */
+}
+
+.sale{
+    position: relative;
+    width: 150px;
+    top: 20%;
+    right: -37%;
+}
+
+.right{
+    /* border-width:0 10px 0 ;  */
+    /* border-style: ridge ; */
+    /* border-color: #1abc9c4f; */
+    box-shadow: -10px 0 15px #0070d24a;
+    background-image: linear-gradient(#a188fb, silver);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    
+}
+.right h3{
+    animation: zoom 5s infinite linear;
+}   
+.btn{
+    padding: 1rem 5rem;
+    /* background-color: red; */
+    background-image: linear-gradient(yellowgreen,aqua);
+    border: none;
+    /* border-color:  linear-gradient(blue, red); */
+    border-radius: 50px;
+    color: aquamarine;
+    font-size: 2rem;
+    font-family: 'Alkatra', cursive;
+}
+.grab{
+    display: none;
+}
+footer{
+    text-align: right;
+    padding: 20px ;
+    position: fixed;
+    bottom: 0;
+    background-color:  #1abc9c2e;
+    width: 100%;
+    color: #1429448f;
+    
+}
+footer p{
+    margin-right: 40px;
+}
+
+/* Some responsive stuff */
+
+@media only screen and (max-width:800px) {
+    nav{
+        text-align: center;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    .left{
+        background-image: url(/img/mainWall.jpg);
+    }
+
+    .sale{
+        display: none;
+    }
+
+    .grab{
+        display: block;
+        position: relative;
+        padding: 2rem 3rem;
+        font-size: 2rem;
+        background-image: linear-gradient(22.5deg, blueviolet, white);
+        border:none ;
+        border-radius: 50px;
+        top: 80%;
+        right: -4%;
+        animation: color 1s infinite linear;
+    }
+
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(50%);
+    }
+    25%{
+        transform: scale(75%);
+    }
+    50%{
+        transform: scale(100%);
+    }
+    75%{
+        transform: scale(75%);
+    }
+    100%{
+        transform: scale(50%);
+    }
+}
+
+@keyframes color {
+    0%{
+        background-image: linear-gradient(22.5deg, blueviolet, white);
+    }
+    25%{
+        background-image: linear-gradient(22.5deg, white, blueviolet);
+    }
+    50%{
+        background-image: linear-gradient(22.5deg, blueviolet, white);
+    }
+    75%{
+        background-image: linear-gradient(22.5deg, white, blueviolet);
+    }
+    100%{
+        background-image: linear-gradient(22.5deg, blueviolet, white);
+    }
+}
